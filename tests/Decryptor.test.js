@@ -1,6 +1,6 @@
 const nacl = require('libsodium-wrappers')
 const Decryptor = require('../src/Decryptor.js')
-
+w
 describe('Decryption', () => {
 
   let msg, ciphertext, nonce, key, decryptor
