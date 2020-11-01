@@ -4,13 +4,13 @@ const Decryptor = require('./Decryptor')
 
 
 //zet private key in closure
+let message;
 
 module.exports = async(peer) => {
     await nacl.ready;
     let keys = nacl.crypto_kx_keypair();
     let otherPeer = peer;
     let encryptor, decryptor, rx, tx;
-    global.message;
     let [pk, sk] = [keys.publicKey, keys.privateKey]
     let secureSessionPeer = {
         publicKey: pk,
